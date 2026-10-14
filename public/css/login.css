@@ -1,0 +1,47 @@
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#2563eb;--blue-d:#1e3a8a;--bg:#f1f5f9;--text:#0f172a;--muted:#64748b;--border:#e2e8f0}
+body{font-family:'Plus Jakarta Sans',system-ui,Segoe UI,Arial,sans-serif;min-height:100vh;display:flex;background:var(--bg)}
+.left-panel{flex:1;background:linear-gradient(160deg,var(--blue-d),var(--blue));color:#fff;padding:3rem;display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}
+.left-brand{display:flex;align-items:center;gap:.8rem}
+.left-brand .icon{width:60px;height:60px;flex:0 0 60px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#fff;border-radius:14px;border:0;box-shadow:0 4px 14px rgba(0,0,0,.2);padding:6px}
+.left-brand .icon img{width:100%;height:100%;object-fit:contain;display:block}
+.brand-text strong{display:block;font-size:1rem}.brand-text span{font-size:.8rem;opacity:.8}
+.left-content h2{font-size:2rem;line-height:1.25;margin:1.5rem 0 .8rem}.left-content h2 span{color:#93c5fd}
+.left-content p{opacity:.85;max-width:400px;line-height:1.6}
+.left-features{display:flex;flex-direction:column;gap:.9rem}
+.feature-item{display:flex;align-items:center;gap:.7rem;font-size:.88rem}
+.feature-dot{width:30px;height:30px;background:#ffffff1a;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.feature-dot svg{width:15px;height:15px}
+.right-panel{width:440px;flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:2rem}
+.login-box{width:100%;max-width:360px}
+.login-box h1{font-size:1.4rem;color:var(--text);margin-bottom:.2rem}
+.login-box .sub{color:var(--muted);font-size:.88rem;margin-bottom:1.6rem}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:.4rem}
+.input-wrap{position:relative}
+.input-wrap input{width:100%;padding:.7rem .8rem;border:1.5px solid var(--border);border-radius:9px;font:inherit;font-size:.92rem}
+.input-wrap input:focus{outline:none;border-color:var(--blue)}
+.toggle-eye{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:0;cursor:pointer;color:var(--muted);display:flex}
+.form-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.3rem;font-size:.82rem}
+.checkbox-wrap{display:flex;align-items:center;gap:.4rem;color:var(--muted)}
+.forgot-link{color:var(--blue);text-decoration:none}
+.error-msg{display:none;background:#fef2f2;color:#991b1b;border:1px solid #fecaca;padding:.6rem .8rem;border-radius:8px;font-size:.82rem;margin-bottom:1rem}
+.error-msg.show{display:block}
+.btn-login{width:100%;padding:.8rem;background:var(--blue);color:#fff;border:0;border-radius:9px;font-family:inherit;font-weight:700;font-size:.92rem;cursor:pointer;position:relative}
+.btn-login:hover{background:var(--blue-d)}
+.btn-login .spinner{display:none;width:16px;height:16px;border:2px solid #ffffff55;border-top-color:#fff;border-radius:50%;position:absolute;right:16px;top:50%;margin-top:-8px;animation:spin .6s linear infinite}
+.btn-login.loading .btn-text{opacity:.4}.btn-login.loading .spinner{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.divider{text-align:center;color:var(--muted);font-size:.78rem;margin:1.2rem 0;position:relative}
+.btn-back{display:block;text-align:center;padding:.65rem;border:1.5px solid var(--border);border-radius:9px;color:var(--text);text-decoration:none;font-size:.86rem;font-weight:600}
+.btn-back:hover{background:#f8fafc}
+.success-overlay{position:fixed;inset:0;background:#0f172acc;display:none;align-items:center;justify-content:center;z-index:300}
+.success-overlay.show{display:flex}
+.success-card{background:#fff;border-radius:16px;padding:2rem;text-align:center;width:280px}
+.success-icon{width:52px;height:52px;background:#dcfce7;color:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem}
+.success-icon svg{width:26px;height:26px}
+.success-card h3{margin-bottom:.3rem}.success-card p{color:var(--muted);font-size:.85rem;margin-bottom:1rem}
+.success-bar{height:5px;background:#e2e8f0;border-radius:99px;overflow:hidden}
+.success-bar-fill{height:100%;width:0;background:var(--blue);transition:width 2s linear}
+@media(max-width:860px){.left-panel{display:none}.right-panel{width:100%}}
+.feature-dot i{font-size:.8rem}
